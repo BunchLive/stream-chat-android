@@ -18,7 +18,7 @@ package com.getstream.sdk.chat.startup
 
 import android.content.Context
 import androidx.startup.Initializer
-import com.jakewharton.threetenabp.AndroidThreeTen
+// import com.jakewharton.threetenabp.AndroidThreeTen
 import io.getstream.chat.android.core.internal.coroutines.DispatcherProvider
 import kotlinx.coroutines.runBlocking
 
@@ -32,7 +32,7 @@ public class ThreeTenInitializer : Initializer<Unit> {
     }
 
     private fun initThreeTen(context: Context) {
-        AndroidThreeTen.init(context)
+        // AndroidThreeTen.init(context)
     }
 
     override fun dependencies(): List<Class<out Initializer<*>>> = emptyList()

@@ -65,7 +65,7 @@ dependencies {
     implementation Dependencies.materialComponents
     implementation Dependencies.androidxLifecycleLiveDataKtx
 
-    api Dependencies.threeTenAbp
+    api Dependencies.threeTenBp
 
     implementation Dependencies.coil
     implementation Dependencies.coilGif
