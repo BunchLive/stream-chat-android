@@ -27,4 +27,4 @@ jobs:
           echo "nexusPassword=$NEXUS_PASSWORD" 1>>local.properties
 
       - name: Publish to Nexus
-        run: ./gradlew publishReleasePublicationToNexusRepository
+        run: ./gradlew publish
