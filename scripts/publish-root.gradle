@@ -35,12 +35,12 @@ if (snapshot) {
 // Set up Sonatype repository
 nexusPublishing {
     repositories {
-        sonatype {
-            stagingProfileId = sonatypeStagingProfileId
-            username = ossrhUsername
-            password = ossrhPassword
-            version = rootVersionName
-        }
+//        sonatype {
+//            stagingProfileId = sonatypeStagingProfileId
+//            username = ossrhUsername
+//            password = ossrhPassword
+//            version = rootVersionName
+//        }
     }
 }
 
