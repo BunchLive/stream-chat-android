@@ -16,13 +16,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Set up Nexus credentials
-        env:
-          NEXUS_USERNAME: ${{secrets.NEXUS_USERNAME}}
-          NEXUS_PASSWORD: ${{secrets.NEXUS_PASSWORD}}
-        run: |
-          echo "nexusUsername=$NEXUS_USERNAME" 1>>local.properties
-          echo "nexusPassword=$NEXUS_PASSWORD" 1>>local.properties
-
       - name: Publish to Nexus
         run: ./gradlew publishReleasePublicationToNexusRepository
+        env:
+          NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
+          NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
