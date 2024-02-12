@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3.1.0
-        with:
-          ref: release
 
       - uses: actions/setup-java@v3
         with:
@@ -27,4 +25,4 @@ jobs:
           echo "nexusPassword=$NEXUS_PASSWORD" 1>>local.properties
 
       - name: Publish to Nexus
-        run: ./gradlew publishAllPublicationsToNexusRepository
+        run: ./gradlew publishReleasePublicationToNexusRepository
